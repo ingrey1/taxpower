@@ -1,6 +1,5 @@
 ---
-title: Overview
+title: Account Setup
 sidebar_position: 1
 ---
 
-overview.md
