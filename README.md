@@ -1,9 +1,9 @@
 
 # TaxPower API Documentation
 
-## Introduction
+### Introduction
 
-TaxPower is a modern tax calculation cloud-based RESTful API. This git repository contains the Markdown documentation for using the TaxPower API.
+TaxPower is a modern tax calculation cloud-based RESTful API. This git repository contains the documentation for using the TaxPower API.
 
 
 ### Website
