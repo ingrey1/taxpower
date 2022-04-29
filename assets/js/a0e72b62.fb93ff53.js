@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktaxpower=self.webpackChunktaxpower||[]).push([[945],{9162:function(e){e.exports=JSON.parse('{"plugin":{"name":"docusaurus-plugin-redoc","id":"plugin-redoc-0"}}')}}]);
