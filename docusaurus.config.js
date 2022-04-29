@@ -28,8 +28,18 @@ const config = {
         },
       }),
     ],
+    [ // add for Open API spec
+      'redocusaurus',
+      {
+        specs: [
+          {
+            spec: 'taxpower-api.yaml',
+            route: '/docs/api-reference/'
+          },
+        ],
+      },
+    ]
   ],
-
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
