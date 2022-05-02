@@ -73,19 +73,19 @@ paths:
         - api_key: []
       responses:
         '200':
-          description: successful request
+          description: Successful Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/TaxSuccess'
         '400':
-          description: bad request
+          description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Tax400'
         '500':
-          description: bad request
+          description: Internal Server Error
           content:
             application/json:
               schema:
