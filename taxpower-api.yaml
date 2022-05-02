@@ -1,125 +1,85 @@
 openapi: 3.0.0
 servers:
-  - url: //petstore.swagger.io/v2
-    description: Default server
-  - url: //petstore.swagger.io/sandbox
-    description: Sandbox server
+  - url: https://wwww.taxpower.com/api/v1
+    description: production server
 info:
   description: >
-    This is a sample server Petstore server.
-
-    You can find out more about Swagger at
-
-    [http://swagger.io](http://swagger.io) or on [irc.freenode.net,
-    #swagger](http://swagger.io/irc/).
-
-    For this sample, you can use the api key `special-key` to test the
-    authorization filters.
-
-
     # Introduction
 
-    This API is documented in **OpenAPI format** and is based on
-
-    [Petstore sample](http://petstore.swagger.io/) provided by
-    [swagger.io](http://swagger.io) team.
-
-    It was **extended** to illustrate features of
-    [generator-openapi-repo](https://github.com/Rebilly/generator-openapi-repo)
-
-    tool and [ReDoc](https://github.com/Redocly/redoc) documentation. In
-    addition to standard
-
-    OpenAPI syntax we use a few [vendor
-    extensions](https://github.com/Redocly/redoc/blob/master/docs/redoc-vendor-extensions.md).
-
-
-    # OpenAPI Specification
-
-    This API is documented in **OpenAPI format** and is based on
-
-    [Petstore sample](http://petstore.swagger.io/) provided by
-    [swagger.io](http://swagger.io) team.
-
-    It was **extended** to illustrate features of
-    [generator-openapi-repo](https://github.com/Rebilly/generator-openapi-repo)
-
-    tool and [ReDoc](https://github.com/Redocly/redoc) documentation. In
-    addition to standard
-
-    OpenAPI syntax we use a few [vendor
-    extensions](https://github.com/Redocly/redoc/blob/master/docs/redoc-vendor-extensions.md).
-
-
-    # Cross-Origin Resource Sharing
-
-    This API features Cross-Origin Resource Sharing (CORS) implemented in
-    compliance with  [W3C spec](https://www.w3.org/TR/cors/).
-
-    And that allows cross-domain communication from the browser.
-
-    All responses have a wildcard same-origin which makes them completely public
-    and accessible to everyone, including any code on any site.
-
-
+    This document explains how to communicate with the TaxPower API.
+    
     # Authentication
 
-
-    Petstore offers two forms of authentication:
-      - API Key
-      - OAuth2
-    OAuth2 - an open protocol to allow secure authorization in a simple
-
-    and standard method from web, mobile and desktop applications.
-
-
     <SecurityDefinitions />
+
   version: 1.0.0
-  title: Swagger Petstore [Automatic Page From File]
-  termsOfService: http://swagger.io/terms/
-  contact:
-    name: API Support
-    email: apiteam@swagger.io
-    url: https://github.com/Redocly/redoc
-  x-logo:
-    url: https://redocly.github.io/redoc/petstore-logo.png
-    altText: Petstore logo
-  license:
-    name: Apache 2.0
-    url: http://www.apache.org/licenses/LICENSE-2.0.html
-externalDocs:
-  description: Find out how to create Github repo for your OpenAPI spec.
-  url: https://github.com/Rebilly/generator-openapi-repo
-tags:
-  - name: pet
-    description: Everything about your Pets
-  - name: store
-    description: Access to Petstore orders
-  - name: user
-    description: Operations about user
-  - name: pet_model
-    x-displayName: The Pet Model
-    description: |
-      <SchemaDefinition schemaRef="#/components/schemas/Pet" />
-  - name: store_model
-    x-displayName: The Order Model
-    description: >
-      <SchemaDefinition schemaRef="#/components/schemas/Order"
-      exampleRef="#/components/examples/Order" showReadOnly={true}
-      showWriteOnly={true} />
+  title: TaxPower API
 x-tagGroups:
-  - name: General
+  - name: Tax Management
     tags:
-      - pet
-      - store
+      - Tax
   - name: User Management
     tags:
       - user
-  - name: Models
-    tags:
-      - pet_model
-      - store_model
 paths:
+  /tax/calculate:
+    parameters:
+      - name: accept
+        in: header
+        description: The response data will be in JSON format.
+        required: true
+        schema:
+          type: string
+          default: application/json
+      - name: api_key
+        in: header
+        description: Used to authenticate the request.
+        required: true
+        example: apikey1234abcdefghij0123456789
+        schema:
+          type: string
+      - name: amount
+        in: query
+        description: This is the base amount that will be used to calculate the tax.
+        required: true
+        example: 19.99
+        schema:
+          type: number    
+      - name: zipcode
+        in: query
+        description: The tax rate used to calculate the tax will be retrieved using this zipcode.
+        required: true
+        example: 95501
+        schema:
+          type: string
+      - name: currency
+        in: query
+        description: The desired currency you want the TaxPower API to respond with.
+        required: false
+        example: USD
+        schema:
+          type: string
+          enum:
+            - USD
+            - EUR
+          default: USD
+    get:
+      summary: Calculate Tax
+      description: Calculate tax for any zipcode in the US. Multiple currencies supported.
+      operationId: Calculate Tax
+      tags:
+        - Tax
+      security:
+      - api_key: []
+      responses:
+       '200':
+          description: successful request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Pet'
+         
+         
   /pet:
     parameters:
       - name: Accept-Language
@@ -968,7 +928,7 @@ components:
         message:
           type: string
     Cat:
-      description: A representation of a cat
+      description: Tax Response Data
       allOf:
         - $ref: '#/components/schemas/Pet'
         - type: object
@@ -1225,21 +1185,15 @@ components:
       description: List of user object
       required: true
   securitySchemes:
-    petstore_auth:
-      description: |
-        Get access to data while protecting your account credentials.
-        OAuth2 is also a safer and more secure way to give you access.
-      type: oauth2
-      flows:
-        implicit:
-          authorizationUrl: http://petstore.swagger.io/api/oauth/dialog
-          scopes:
-            write:pets: modify pets in your account
-            read:pets: read your pets
     api_key:
       description: >
-        For this sample, you can use the api key `special-key` to test the
-        authorization filters.
+        To make authorized requests to the TaxPower API, you will need to signup for an account and generate an API key.
+
+         To signup for an account: https://www.taxpower.com/docs/getting-started/account-setup
+
+         To generate an API key: https://www.taxpower.com/docs/getting-started/generate-api-key 
+
+         Once you have a valid API key, simply attach that key as the value for the "api_key" header to make authenticated requests.   
       type: apiKey
       name: api_key
       in: header
