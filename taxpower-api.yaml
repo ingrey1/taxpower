@@ -70,16 +70,20 @@ paths:
       tags:
         - Tax
       security:
-      - api_key: []
+        - api_key: []
       responses:
-       '200':
+        '200':
           description: successful request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/TaxSuccess'
-         
-         
+        '400':
+          description: bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Tax400'          
   /pet:
     parameters:
       - name: Accept-Language
@@ -1034,6 +1038,22 @@ components:
           writeOnly: true
       xml:
         name: Order
+    Tax400:
+      type: object
+      properties:
+        statusCode:
+          type: integer
+          description: HTTP code for response status
+          example: 400
+        error:
+          type: object
+          properties:
+            name:
+              type: string
+              example: "Bad Request"
+            reason:
+              type: string
+              example: Invalid API key 
     TaxSuccess:
       type: object
       properties:
