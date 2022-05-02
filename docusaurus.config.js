@@ -34,7 +34,7 @@ const config = {
         specs: [
           {
             spec: 'taxpower-api.yaml',
-            route: '/docs/api-reference/'
+            route: '/docs/api-reference/',
           },
         ],
       },

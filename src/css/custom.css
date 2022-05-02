@@ -37,3 +37,7 @@
 [data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
+
+.api-content .api-info > p {
+  display: none !important;
+}
