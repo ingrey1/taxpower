@@ -83,7 +83,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Tax400'          
+                $ref: '#/components/schemas/Tax400'
+        '500':
+          description: bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Tax500'          
   /pet:
     parameters:
       - name: Accept-Language
@@ -1053,7 +1059,23 @@ components:
               example: "Bad Request"
             reason:
               type: string
-              example: Invalid API key 
+              example: Invalid API key
+    Tax500:
+      type: object
+      properties:
+        statusCode:
+          type: integer
+          description: HTTP code for response status
+          example: 500
+        error:
+          type: object
+          properties:
+            name:
+              type: string
+              example: "Internal Server Error"
+            reason:
+              type: string
+              example: The TaxPower service could not be reached. Try again later. 
     TaxSuccess:
       type: object
       properties:
