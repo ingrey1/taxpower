@@ -1,0 +1,12 @@
+.priceTool {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.costMessage {
+  border: 10px solid transparent;
+}
+
+
