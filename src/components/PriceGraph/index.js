@@ -33,6 +33,10 @@ ChartJS.register(
         text: 'Cost Per Request',
       },
     },
+    scales: {
+      x: {display: true, title: {display: true, text: "United States' Dollars (USD)"} },
+      y: {display: true, title: {display: true, text: "Request Count"} }
+    }
   };
   
   const requestCounts = [100, 1000, 10000, 100000, 1000000];
