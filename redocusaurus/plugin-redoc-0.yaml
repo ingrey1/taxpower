@@ -1,6 +1,6 @@
 openapi: 3.0.0
 servers:
-  - url: https://wwww.taxpower.com/api/v1
+  - url: https://www.taxpower.com/api/v1
     description: production server
 info:
   description: |
