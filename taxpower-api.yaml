@@ -7,16 +7,15 @@ info:
     # Introduction
      This document explains how to communicate with the TaxPower API.
 
-     **Go to another page**
+     | **Go to another page**                                                                                   |
+     |----------------------------------------------------------------------------------------------------------|
+     | [TaxPower API Documentation](https://ingrey1.github.io/taxpower/docs/overview/)                          |
+     | [Learn To Use This API Reference](https://ingrey1.github.io/taxpower/docs/getting-started/account-setup) |
 
-     - [TaxPower API Documentation](https://ingrey1.github.io/taxpower/docs/overview/)
-     - [Learn To Use This API Reference](https://ingrey1.github.io/taxpower/docs/getting-started/account-setup)
-
-     **To make authorized requests to the TaxPower API, you will need to signup for an account and generate an API key**
-
-     - [Signup For An Account](https://ingrey1.github.io/taxpower/docs/getting-started/account-setup)
-
-     - [Generate An API Key](https://ingrey1.github.io/taxpower/docs/getting-started/generate-api-key)
+     | **Requirements Before Making Request** |
+     |---------------------------------------------------------------------------------------------------------------------|
+     | [Signup For An Account](https://ingrey1.github.io/taxpower/docs/getting-started/account-setup)                      |
+     | [Generate An API Key](https://ingrey1.github.io/taxpower/docs/getting-started/generate-api-key)                     |
 
 
     # Authentication
