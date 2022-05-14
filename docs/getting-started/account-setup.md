@@ -9,6 +9,11 @@ custom_edit_url: null
 
 
 1. **Go To The [TaxPower API Signup Page](https://www.taxpower.com/signup)**
+
+
+![TaxPower API Signup Page](../../static/img/signup.png)
+
+
 2. **Enter User Profile Info**
  - [ ] Email
  - [ ] Password
@@ -20,9 +25,6 @@ custom_edit_url: null
  - [ ] Expiration Date
  - [ ] CSV
  - [ ] Billing Zipcode
-
-![TaxPower API Signup Page](../../static/img/signup.png)
-
 
 :::info
 
