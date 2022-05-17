@@ -39,7 +39,9 @@ custom_edit_url: null
 
 4. **Click "Submit" To Create Your Account And Start Your Free Trial**
 
-5. **Login To The [TaxPower Developer Console Dashboard](https://www.taxpower.com/login) with your email and password**
+5. **Go To The [TaxPower API Login Page](https://www.taxpower.com/login). Login with your email and password**
+
+![TaxPower API Signup Login Page](../../static/img/login.png)
 
 6. **Continue On To [Generate An API Key](generate-api-key.md)**
 
