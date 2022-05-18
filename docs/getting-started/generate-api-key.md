@@ -10,4 +10,8 @@ custom_edit_url: null
 
 - **The TaxPower API Dashboard will allow you to: (a) View Your Request Activity, (b) Manage Billing Issues, and (c) <mark>Manage Your API Keys</mark>**
 
+---
+
 ![TaxPower API Dashboard - API Keys ](../../static/img/dashboard.png)
+
+---

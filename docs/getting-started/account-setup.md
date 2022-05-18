@@ -10,9 +10,11 @@ custom_edit_url: null
 
 1. **Go To The [TaxPower API Signup Page](https://www.taxpower.com/signup)**
 
+---
 
 ![TaxPower API Signup Page](../../static/img/signup.png)
 
+---
 
 2. **Enter User Profile Info**
  - [ ] Email
@@ -41,7 +43,11 @@ custom_edit_url: null
 
 5. **Go To The [TaxPower API Login Page](https://www.taxpower.com/login). Login with your email and password**
 
+---
+
 ![TaxPower API Signup Login Page](../../static/img/login.png)
+
+---
 
 6. **Continue On To [Generate An API Key](generate-api-key.md)**
 
