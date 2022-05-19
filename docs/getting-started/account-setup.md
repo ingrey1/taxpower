@@ -32,14 +32,14 @@ custom_edit_url: null
 
 ### Free Trial Information
 
-- **The free trial begins when you successfully signup**
-- **The free trial ends 30 days after signup**
-- **During the free trial, requests made to the API are not charged**  
+- **The free trial begins when you successfully signup.**
+- **The free trial ends 30 days after signup.**
+- **During the free trial, requests made to the API are not charged.**  
 
 
 :::
 
-4. **Click "Submit" To Create Your Account And Start Your Free Trial**
+4. **Click SUBMIT To Create Your Account And Start Your Free Trial**
 
 5. **Go To The [TaxPower API Login Page](https://www.taxpower.com/login). Login with your email and password**
 
