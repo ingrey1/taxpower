@@ -38,3 +38,44 @@ custom_edit_url: null
 ![Enter Calculate Tax Endpoint](../../../static/img/enter_url.png)
 
 ---
+
+4. **Select the Params tab, and add the amount, zipcode, and currency as [Query Parameters](https://branch.io/glossary/query-parameters/).**
+  
+  - For a full characterization of the available query parameters, see the [API Reference](../../api-reference.md).
+
+  - When you enter the name and value for a query parameter in the Params tab, it will automatically append that key/value pair to the URL.
+  
+---
+
+![Add Query Params](../../../static/img/add_query_params.png)
+
+---
+
+5. **Select the Headers tab, and add your API key as the value for the "api_key" header**
+
+  - If you don't have an API key yet, you can find the instructions to generate one [here](../generate-api-key). 
+
+---
+
+![Add API Key](../../../static/img/enter_api_key.png)
+
+---
+
+6. **The request is now ready to be sent. Go and click the SEND button.**
+
+7. **Congratulations, you've successfully made your first request to the TaxPower API! The 200 success response from the TaxPower server will contain some JSON data that includes the tax for the base amount. It should look something like this.**
+
+```json
+{
+  "statusCode": 200,
+  "data": {
+    "zipcode": 93063,
+    "currency": "USD",
+    "baseAmount": 10,
+    "taxRate": 0.1,
+    "tax": 1,
+    "totalAmount": 11
+  }
+}
+```
+
