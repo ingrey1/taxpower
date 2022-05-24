@@ -10,7 +10,7 @@ custom_edit_url: null
 
 - **The screenshots that follow on this page use the Mac version of Postman.**
 
-1. **Open up the Postman application. You should see something like this.**
+1. **Open up the Postman application. You should see something like this:**
 
 ---
 
@@ -51,7 +51,7 @@ custom_edit_url: null
 
 ---
 
-5. **Select the Headers tab, and add your API key as the value for the "api_key" header**
+5. **Select the Headers tab, and add your API key as the value for the "api_key" header.**
 
   - If you don't have an API key yet, you can find the instructions to generate one [here](../generate-api-key). 
 
@@ -61,9 +61,9 @@ custom_edit_url: null
 
 ---
 
-6. **The request is now ready to be sent. Go and click the SEND button.**
+6. **The request is now ready to be sent. Click the SEND button.**
 
-7. **Congratulations, you've successfully made your first request to the TaxPower API! The 200 success response from the TaxPower server will contain some JSON data that includes the tax for the base amount. It should look something like this.**
+7. **Congratulations, you've successfully made your first request to the TaxPower API! The 200 success response from the TaxPower server will contain some JSON data that includes the tax for the base amount. It should look something like this:**
 
 ```json
 {
